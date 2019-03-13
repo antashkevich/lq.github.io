@@ -1390,6 +1390,8 @@ input[type=range]::-moz-range-track {
 .team-member__icon {
   width: 104px;
   height: 104px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   margin-right: 16px;
 }
 
