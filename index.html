@@ -39,6 +39,7 @@
     <div class="video-container">
       <video autoplay loop muted poster="./images/LQ_000.jpg">
         <source src="./images/lq-bg.h264.mp4" type='video/mp4; codecs="avc1.4D401E,mp4a.40.2"' />
+        <source src="./images/LQ-final.mp4" type="video/mp4">
       </video>
     </div>
     <header class="header" id="header">
@@ -108,7 +109,7 @@
   </section>
 
   <!--wr-advantages -->
-  <section class="wr-advantages" id="advantages">
+  <section class="wr-advantages section-anchor" id="advantages">
     <div class="container">
       <h3>Why LOQUAT</h3>
       <div class="advantages-block">
@@ -215,6 +216,7 @@
         <div class="action-block-mobile"></div>
         <video id="video" loop>
           <source src="./images/video.h264.mp4" type='video/mp4; codecs="avc1.4D401E,mp4a.40.2"' />
+          <source src="./images/website.mp4" type="video/mp4">
         </video>
         <button class="button-play-video">
           <svg width="19px" height="24px" viewBox="0 0 19 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -253,7 +255,7 @@
   </section>
 
   <!--wr-finance -->
-  <section class="wr-finance" id="finance">
+  <section class="wr-finance section-anchor" id="finance">
     <picture class="bg-block">
       <source srcset="./images/city-bg.webp 1x,
                       ./images/city-bg@2x.webp 2x" type="image/webp">
@@ -331,7 +333,7 @@
   </section>
 
   <!--Team-->
-  <section class="wr-team" id="team">
+  <section class="wr-team section-anchor" id="team">
     <div class="container">
       <h3>Who We Are</h3>
       <div class="team">
@@ -654,8 +656,27 @@
             </div>
             <div class="slider-item" data-id="5">
               <img src="./images/photo-rob@2x.png" alt="memeber image">
-            </div>
+            </div>            
           </div>
+          <ul class="slider-dots">
+            <li data-dot="1">
+              <button type="button"></button>
+            </li>
+            <li data-dot="2">
+              <button type="button"></button>
+            </li>
+            <li data-dot="3">
+              <button type="button"></button>
+            </li>
+            <li data-dot="4">
+              <button type="button"></button>
+            </li>
+            <li data-dot="5">
+              <button type="button"></button>
+            </li>
+          </ul>
+          <button class="slider-prev slider-arrow" aria-label="Previous" type="button"></button>
+          <button class="slider-next slider-arrow" aria-label="Next" type="button"></button>
         </div>
         <a href="" class="close-popup">
           <img src="./images/ic-close@2x.png" alt="close popup icon">
@@ -665,7 +686,7 @@
   </section>
 
   <!--Footer-->
-  <footer class="footer" id="contact">
+  <footer class="footer section-anchor" id="contact">
     <div class="container">
       <h3>Contact Us</h3>
       <p class="footer__subtitle">We would love to hear from you. If you have any questions about LOQUAT, please contact us:</p>

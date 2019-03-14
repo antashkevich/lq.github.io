@@ -359,13 +359,13 @@ template {
   font-family: 'ClanMed';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/clan-med-webfont.woff") format("woff");
+  src: url("../fonts/clan-med-webfont.woff") format("woff"), url("../fonts/ClanPro-Medium.otf") format("opentype");
 }
 @font-face {
   font-family: 'ClanBook';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/clan-book-webfont.woff") format("woff");
+  src: url("../fonts/clan-book-webfont.woff") format("woff"), url("../fonts/ClanPro-Book.otf") format("opentype");
 }
 ul, h1, h2, h3, h4, h5, p {
   padding: 0;
@@ -807,6 +807,7 @@ body {
 }
 .advantage-item__info h4 {
   color: #202128;
+  text-align: left;
   margin-bottom: 16px;
 }
 .advantage-item__info p {
@@ -1692,7 +1693,7 @@ input[type=range]::-moz-range-track {
   opacity: .6;
 }
 
-.slick-dots {
+.slick-dots, .slider-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1702,7 +1703,7 @@ input[type=range]::-moz-range-track {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.slick-dots li {
+.slick-dots li, .slider-dots li {
   width: 8px;
   height: 8px;
   display: -webkit-box;
@@ -1716,10 +1717,10 @@ input[type=range]::-moz-range-track {
   justify-content: center;
   margin: 0 2px;
 }
-.slick-dots li.slick-active button {
+.slick-dots li.slick-active button, .slider-dots li.slick-active button {
   background-color: #afafb1;
 }
-.slick-dots button {
+.slick-dots button, .slider-dots button {
   font-size: 0;
   width: 6px;
   height: 6px;
@@ -1728,14 +1729,14 @@ input[type=range]::-moz-range-track {
   box-sizing: border-box;
   border-radius: 50%;
 }
-.slick-dots button:focus {
+.slick-dots button:focus, .slider-dots button:focus {
   outline: none;
 }
-.slick-dots button:hover {
+.slick-dots button:hover, .slider-dots button:hover {
   background-color: rgba(175, 175, 177, 0.5);
 }
 
-.slick-arrow {
+.slick-arrow, .slider-arrow {
   font-size: 0;
   width: 36px;
   height: 36px;
@@ -1754,7 +1755,7 @@ input[type=range]::-moz-range-track {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.slick-arrow:after {
+.slick-arrow:after, .slider-arrow:after {
   content: '';
   display: block;
   width: 12px;
@@ -1762,24 +1763,44 @@ input[type=range]::-moz-range-track {
   background: url("../images/ic-arrow@2x.png") center no-repeat;
   background-size: contain;
 }
-.slick-arrow.slick-prev {
+.slick-arrow.slick-prev, .slick-arrow.slider-prev, .slider-arrow.slick-prev, .slider-arrow.slider-prev {
   left: -42px;
 }
-.slick-arrow.slick-next {
+.slick-arrow.slick-next, .slick-arrow.slider-next, .slider-arrow.slick-next, .slider-arrow.slider-next {
   -webkit-transform: rotate(180deg) translateY(-50%);
   transform: rotate(180deg) translateY(-50%);
   top: calc(50% - 36px);
   right: -42px;
 }
-.slick-arrow:focus {
+.slick-arrow:focus, .slider-arrow:focus {
   outline: none;
   background-color: rgba(255, 175, 57, 0.2);
 }
-.slick-arrow:hover {
+.slick-arrow:hover, .slider-arrow:hover {
   background-color: rgba(255, 175, 57, 0.1);
 }
-.slick-arrow:active {
+.slick-arrow:active, .slider-arrow:active {
   background-color: rgba(255, 175, 57, 0.2);
+}
+
+.slider-arrow {
+  top: initial;
+  bottom: 11%;
+}
+.slider-arrow.slick-next, .slider-arrow.slider-next {
+  top: initial;
+  bottom: calc(11% + 36px);
+}
+.slider-arrow.disable:after {
+  background: url("../images/ic-arrow-disable@2x.png") center no-repeat;
+  background-size: contain;
+}
+.slider-arrow.disable:focus, .slider-arrow.disable:hover, .slider-arrow.disable:active {
+  background: none;
+}
+
+.big-slider .slider-dots, .big-slider .slider-arrow {
+  display: none;
 }
 
 footer {
